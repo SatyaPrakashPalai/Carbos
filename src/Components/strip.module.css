@@ -1,0 +1,9 @@
+.strip {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.strip span {
+  font-size: 2vw;
+}

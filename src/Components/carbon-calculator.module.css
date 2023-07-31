@@ -1,0 +1,43 @@
+.hero-section {
+  display: flex;
+  height: 600px;
+  background-color: #e6e8e7;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+.heading {
+  font-size: 5vw;
+  margin-bottom: 0;
+  line-height: 20px;
+  align-self: flex-start;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-section {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+  justify-content: center;
+  align-items: center;
+}
+.descrip {
+  width: 80%;
+  align-self: flex-start;
+
+  font-weight: 500;
+  font-size: 18px;
+}
+.font {
+  font-family: "Borel", cursive;
+}
+.img {
+  width: 40vw;
+}
+.live-demo {
+  align-self: flex-start;
+}

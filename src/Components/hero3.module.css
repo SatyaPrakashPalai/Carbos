@@ -1,0 +1,51 @@
+.hero-section {
+  display: flex;
+  height: 400px;
+  background-color: #efeef3;
+  align-items: center;
+  /* width: 100%; */
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+.heading {
+  font-size: 3rem;
+  margin-bottom: 0;
+  /* line-height: 50px; */
+  /* line-height: 3rem; */
+  width: 80%;
+
+  /* align-self: flex-start; */
+}
+.left-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  /* flex-grow: 1; */
+}
+
+.descrip {
+  width: 80%;
+  /* align-self: flex-start; */
+
+  font-weight: 500;
+  font-size: 18px;
+}
+.font {
+  font-family: "Borel", cursive;
+}
+.span {
+  background: linear-gradient(90deg, #176d40 0%, #789f80 100%);
+  /* color: #176d40; */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.right-section {
+  display: flex;
+  width: 40%;
+  /* flex-grow: 1; */
+  font-size: 5vw;
+  font-weight: 600;
+  justify-content: center;
+}

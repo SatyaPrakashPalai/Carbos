@@ -1,0 +1,22 @@
+.navbar-wrapper {
+  display: flex;
+  background-color: black;
+  height: 3em;
+  color: white;
+  padding: 0 20px;
+}
+.logo {
+  height: auto;
+  width: 50px;
+}
+.left-section {
+  display: flex;
+  flex: 2;
+  gap: 30px;
+  align-items: center;
+}
+.right-section {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
