@@ -1,7 +1,33 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
+import * as emailjs from "emailjs-com";
 import styles from "./contact.module.css";
 
 function Contact() {
+  const inputRef = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = document.getElementById("myForm");
+
+    emailjs
+      .sendForm(
+        "service_hdlk7ut",
+        "template_zcqp03i",
+        form,
+        "18cXJfPo7eJx6EfuL"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    inputRef.current.value = "";
+  };
+
   return (
     <section className={styles["section-wrapper"]}>
       <div className={styles["left-section"]}>
@@ -50,8 +76,8 @@ function Contact() {
         <main className={`${styles.main} ${styles.page__main}`}>
           <form
             className={`${styles.form} ${styles.main__form}`}
-            action="javascript:void(0);"
-            method="POST"
+            id="myForm"
+            onSubmit={handleSubmit}
           >
             <div className={styles["form__linput"]}>
               <label className={styles["form__label"]} for="yname">
@@ -59,9 +85,9 @@ function Contact() {
               </label>
               <input
                 className={styles["form__input"]}
-                id="yname"
+                id="from_name"
                 type="text"
-                name="yname"
+                name="from_name"
                 placeholder="Your name..."
               />
             </div>
@@ -71,9 +97,9 @@ function Contact() {
               </label>
               <input
                 className={styles["form__input"]}
-                id="email"
-                type="text"
-                name="email"
+                id="from_email"
+                type="email"
+                name="from_email"
                 placeholder="Your email id..."
               />
             </div>
@@ -84,8 +110,9 @@ function Contact() {
               </label>
               <textarea
                 className={styles["form__textarea"]}
-                id="subject"
-                name="subject"
+                id="message"
+                name="message"
+                ref={inputRef}
                 placeholder="Write something.."
                 rows="7"
               ></textarea>
@@ -93,6 +120,7 @@ function Contact() {
             <button
               className={`${styles.primary__btn} ${styles.form__btn}`}
               type="submit"
+              value="Send"
             >
               Submit
             </button>
